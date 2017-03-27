@@ -5,7 +5,7 @@ import Title from './Header/Title';
 class Header extends Component {
     render() {
         return (
-            <Title />
+            <Title name={this.props.name}/>
         );
     }
 }
