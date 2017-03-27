@@ -12,16 +12,14 @@ class App extends Component {
         }
     }
 
+    changeName(name) {
+        this.setState({name});
+    }
+
     render() {
-        setTimeout(() => {
-            this.setState({
-                name: 'kwang' === this.state.name ? 'kwang89' : 'kwang'
-            })
-        }, 1000);
         return (
             <div>
-                <Header name={this.state.name}/>
-                <Header name="kwang89"/>
+                <Header changeName={this.changeName.bind(this)} name={this.state.name}/>
                 <Footer />
             </div>
         );
